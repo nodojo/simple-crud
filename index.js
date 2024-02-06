@@ -9,3 +9,11 @@ app.use(
     extended: true,
   })
 )
+
+app.get('/', (request, response) => {
+  response.json({ info: 'Simple CRUD application that uses Node, Express, and Postgres.' })
+})
+
+app.listen(port, () => {
+  console.log(`Application running on port ${port}.`)
+})
