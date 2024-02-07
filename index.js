@@ -22,6 +22,8 @@ app.post('/users', db.createUser)
 app.put('/users/:id', db.updateUser)
 app.delete('/users/:id', db.deleteUser)
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Application running on port ${port}.`)
 })
+
+module.exports = server;
