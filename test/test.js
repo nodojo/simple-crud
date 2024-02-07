@@ -53,3 +53,17 @@ describe('PUT /users/:id', function() {
       });
     })
 })
+
+describe('DELETE /users/:id', function() {
+  it('delete a user by id', function(done) {
+    request(app)
+    .delete('/users/7')
+    .set('Accept', 'application/json')
+    .expect('Content-Type', 'text/html; charset=utf-8')
+    .expect(200)
+    .end(function(err, res) {
+      if (err) return done(err);
+      return done();
+    });
+  })
+})
