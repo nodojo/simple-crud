@@ -10,3 +10,16 @@ describe('GET /users', function() {
     .expect(200, done);
   });
 });
+
+describe('GET /users/:id', function() {
+  it('returns a user', function(done) {
+    request(app)
+    .get('/users/1')
+    .set('Accept', 'application/json')
+    .expect(200, [{
+      id: 1,
+      name: 'Calvin',
+      email: 'calvin@example.com'
+    }], done)
+  })
+})
