@@ -23,3 +23,18 @@ describe('GET /users/:id', function() {
     }], done)
   })
 })
+
+describe('POST /users', function() {
+  it('responds with json', function(done) {
+    request(app)
+    .post('/users')
+    .send({name: 'john',email: 'john@test.com'})
+    .set('Accept', 'application/json')
+    .expect('Content-Type', 'text/html; charset=utf-8')
+    .expect(201)
+    .end(function(err, res) {
+      if (err) return done(err);
+      return done();
+    });
+  });
+});
