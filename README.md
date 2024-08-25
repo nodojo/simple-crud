@@ -8,3 +8,7 @@
 - When completed, push your project to GitHub or Gitlab and reply here (be sure to include hiring@securegive.com) with a link to the repository
 
 That's it! We'll let you give it as a demo and code walkthrough as a means of meeting the team.
+
+## Resources
+
+- [CRUD REST API with Node.js, Express, and PostgreSQL](https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/)
